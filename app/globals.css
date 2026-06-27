@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #f4f1ea;
+  --forest: #1b3a2d;
+  --ember: #d4623a;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--forest);
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Yumuşak, tonal seçim rengi */
+::selection {
+  background: rgba(212, 98, 58, 0.18);
+  color: var(--forest);
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300;
+  }
+  .btn-primary {
+    @apply btn bg-ember text-cream hover:bg-ember-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-ember/20;
+  }
+  .btn-ghost {
+    @apply btn border border-forest/20 text-forest hover:border-forest/40 hover:-translate-y-0.5;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-ember;
+  }
+  .section-title {
+    @apply font-display text-3xl font-semibold leading-tight text-forest sm:text-4xl md:text-5xl;
+  }
+}
+
+/* prefers-reduced-motion: hareketi sadeleştir */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
