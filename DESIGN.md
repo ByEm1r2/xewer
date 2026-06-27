@@ -13,24 +13,35 @@
 
 ---
 
-## 2. Renk Paleti (Dark-first — premium his)
+## 2. Renk Paleti — "Krem & Adaçayı" (NİHAİ)
 
-Ana yön: **koyu (dark) tema**, tek canlı vurgu rengi. "Havalı, üst seviye" hissi en kolay koyu zeminde verilir.
+Açık, editoryal, sıcak zemin + derin orman yeşili + sıcak terracotta vurgu.
+**AI klişesi yok** (mor/indigo/neon kullanılmaz). Havalı his; tonal, yumuşak
+geçişlerden ve boşluktan gelir — koyu zeminden değil.
 
 | Rol | Renk | Hex |
 |-----|------|-----|
-| Zemin (ana) | Neredeyse siyah | `#0A0A0C` |
-| Zemin (kart) | Koyu gri | `#141418` |
-| Metin (ana) | Kırık beyaz | `#F5F5F7` |
-| Metin (ikincil) | Gri | `#9A9AA5` |
-| **Vurgu (accent)** | Elektrik moru | `#6D5DF6` |
-| Vurgu 2 (gradyan) | Camgöbeği | `#22D3EE` |
-| Başarı/işaret | Limon yeşili | `#A3E635` |
+| Zemin (ana) | Krem / kemik | `#F4F1EA` |
+| Zemin (kart/yüzey) | Sıcak beyaz | `#FBFAF6` |
+| Zemin (alternatif bölüm) | Açık kum | `#EAE4D8` |
+| Metin (ana) / marka | Derin orman yeşili | `#1B3A2D` |
+| Metin (ikincil) | Yeşilimsi gri | `#5A655C` |
+| **Vurgu (CTA, linkler)** | Terracotta / ember | `#D4623A` |
+| Destek yeşili (yumuşak) | Adaçayı | `#7C8C6F` |
+| Çizgi / kenarlık | Sıcak gri | `#DDD7C9` |
 
-> **Alternatif sıcak palet** (istersen): zemin `#0B0B0B`, vurgu amber `#F5A623` + altın `#E8C36B`. Daha "lüks butik" hissi verir.
+### Geçiş (gradyan) prensibi — en kritik kısım
+- **Tonal geçişler:** her zaman aynı renk ailesi içinde, yumuşak.
+  - Bölüm geçişi: krem `#F4F1EA` → açık kum `#EAE4D8`
+  - Yeşil bölümler: orman yeşili `#1B3A2D` → biraz daha koyu `#15302480`
+  - Sıcak vurgu ışıması: terracotta çok düşük opaklıkta, sadece odak noktasında.
+- **Rainbow / çok renkli gradyan YOK** (ucuz ve AI gibi durur).
+- Terracotta **az ve etkili** kullanılır: butonlar, önemli sayılar, hover.
 
-- Hero ve butonlarda **mor→camgöbeği gradyan** kullanılır.
-- Açık tema (light) opsiyonel: aynı renkler invert edilir, ileride eklenebilir.
+### Tema mantığı
+- Ana site **açık (krem) tema**.
+- İsteğe bağlı koyu bölüm: orman yeşili zeminli "öne çıkan" bir şerit
+  (örn. istatistikler / CTA), kontrast ve sinematik his için.
 
 ---
 
@@ -51,9 +62,12 @@ Ana yön: **koyu (dark) tema**, tek canlı vurgu rengi. "Havalı, üst seviye" h
    - Arka planda yumuşak hareket eden gradyan / parçacık efekti.
 2. **Güven şeridi** — "30+ işletme bize güveniyor" + müşteri logoları (kayan şerit).
 3. **Hizmetler** — 3 kart: Landing / Kurumsal Site / E-ticaret. Hover'da yükselme + ışıma.
-4. **Yaptığımız İşler (Portfolyo)** — gerçek projeler, gerçek sonuç rakamlarıyla:
-   - oksuzseramik.com, serinyoltaksi.com, mkuhastanetaksi.com, pollarea.com
-   - Her kartta: görsel, kısa açıklama, "X kat daha hızlı / Y aramada üst sıra" gibi metrik.
+4. **Yaptığımız İşler (Portfolyo)** — *ŞİMDİLİK GİZLİ.*
+   - Bölüm kodlanır ama yayında gizlenir (tek bayrak / feature flag ile açılır).
+   - Daha iyi referanslar gelince açılır. Yeri hazır bekler.
+   - Açıldığında: oksuzseramik.com, serinyoltaksi.com, mkuhastanetaksi.com,
+     pollarea.com — her biri bir sonuç cümlesiyle (örn. "Google'da 1. sıra").
+   - Gizliyken yerine **müşteri yorumları + rakamlar (sayaç animasyonu)** öne çıkar.
 5. **Süreç** — 4 adım: Keşif → Tasarım → Geliştirme → Yayın. Basit ve korkutmayan.
 6. **Neden Velora?** — Hız, mobil-öncelik, SEO, sürekli destek (4 ikon + kısa metin).
 7. **Yorumlar** — müşteri görüşleri (kaydırmalı kartlar).
@@ -114,8 +128,9 @@ Ana yön: **koyu (dark) tema**, tek canlı vurgu rengi. "Havalı, üst seviye" h
 
 ## 9. Sonraki Adımlar
 
-1. [ ] Marka adını onayla (Velora veya alternatif).
-2. [ ] Renk paletini seç (dark-mor / sıcak-amber).
-3. [ ] İçerikleri topla: portfolyo metrikleri, müşteri yorumları, paket fiyatları.
-4. [ ] Next.js iskeletini kur (bu plan onaylanınca).
-5. [ ] Bölümleri sırayla geliştir → Vercel'e deploy.
+1. [x] Renk paleti seçildi → **Krem & Adaçayı** (açık tema).
+2. [x] Portfolyo kararı → **şimdilik gizli** (bölüm hazır, yayında kapalı).
+3. [ ] Marka adını onayla (Velora veya alternatif — geçici olarak Velora).
+4. [ ] Next.js iskeletini kur (Tailwind + Framer Motion + Lenis).
+5. [ ] Hero + temel bölümleri geliştir → Vercel'e deploy.
+6. [ ] İçerik doldur: müşteri yorumları, rakamlar, paket fiyatları.
